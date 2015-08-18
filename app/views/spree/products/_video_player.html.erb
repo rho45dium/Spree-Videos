@@ -18,5 +18,5 @@ if product.videos.length > 0
 		html5_config[:width] = width
 	end
 %>
-	<%= raw video_reference(product.videos.first).embed_html5(html5_config) %>
+  <%== video_embed_html5(product.videos.first, html5_config) %>
 <% end %>

@@ -18,14 +18,7 @@ module Spree
     end
 
     def show
-      video = Video.find(params[:id])
-      client = YouTubeIt::Client.new
-
-      # not sure why the original dev required the configuration options
-      # maybe youtube_it was updated?
-      # client = YouTubeIt::Client.new(:dev_key => YouTubeITConfig.dev_key)
-
-      @video = client.video_by(video.youtube_ref)
+      @video = Video.find(params[:id])
       respond_to do |format|
         format.html # show.html.erb
       end

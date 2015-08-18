@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency('spree_core', '~> 1.1.0')
-  s.add_dependency('youtube_it', '~> 2.1.5')
+  s.add_dependency('yt', '~> 0.25.5')
 
   # test suite
   s.add_development_dependency 'shoulda-matchers'

@@ -2,29 +2,23 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= image_tag(@video.thumbnails.first.url) %>
+<%= image_tag(@video.youtube_thumbnail_url) %>
 
 <p>
   <b>Title:</b>
-  <%= @video.title %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @video.author.name %>
+  <%= @video.youtube_title %>
 </p>
 
 <p>
   <b>Published:</b>
-  <%= @video.published_at %>
+  <%= @video.youtube_published_at %>
 </p>
 
 <p>
   <b>Description:</b>
-  <%= @video.description %>
+  <%= @video.youtube_description %>
 </p>
 
 <p>
-	<%= raw @video.embed_html5({:class => 'video-player', :id => 'my-video', :width => '425', :height => '350', :frameborder => '1'}) %>
+  <%= raw video_embed_html5(@video, {:class => 'video-player', :id => 'my-video', :width => '425', :height => '350', :frameborder => '1'}) %>
 </p>
-
